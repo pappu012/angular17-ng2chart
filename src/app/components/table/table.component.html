@@ -1,0 +1,49 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="card p-4 mt-4 shadow border-0">
+                <h5 class="text-start mb-4">Product List</h5>
+                <!--NOTE: table will be show on desktop or larger screen -->
+                <div class="table-container">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <!-- <th>ID</th> -->
+                                <th>ID</th>
+                                <th>Item Name</th>
+                                <th>Description</th>
+                                <th>Stock</th>
+                           
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let record of data">
+                                <td>{{ record.id }}</td>
+                                <td>{{ record.itemName }}</td>
+                                <td>{{ record.description }}</td>
+                                <td>{{ record.stock }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+                <!-- END OF TABLE -->
+
+                <!--NOTE: list will be show on mobile or smaller screen much easier to view -->
+                <div class="list-container">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-grid" *ngFor="let record of data">
+                            <p class="mb-1">
+                                <b>Item Name:</b> {{record.itemName}}
+                            </p>
+
+                        </li>
+                    </ul>
+                </div>
+                <!--END OF LIST-->
+
+            </div>
+        </div>
+    </div>
+</div>

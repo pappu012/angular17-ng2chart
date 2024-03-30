@@ -1,0 +1,15 @@
+.table-container {
+    display: inline-block;
+
+    @media only screen and (max-width: 990px) {
+        display: none;
+    }
+}
+
+.list-container {
+    display: none;
+
+    @media only screen and (max-width: 990px) {
+        display: inline-block;
+    }
+}
